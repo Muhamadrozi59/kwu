@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diagram Rating Pelanggan</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    width: 90%;
+    max-width: 900px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 12px 30px rgba(240, 236, 3, 0.874);
+}
+
+h2 {
+    margin: 0 0 20px;
+    color: #333;
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h2>Rating Pelanggan</h2>
+    <canvas id="ratingChart" height="120"></canvas>
+</div>
+
+<script>
+const ctx = document.getElementById('ratingChart').getContext('2d');
+
+// Gradient warna batang
+const gradient = ctx.createLinearGradient(0, 0, 0, 300);
+gradient.addColorStop(0, '#4facfe');
+gradient.addColorStop(1, '#00f2fe');
+
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: [
+            'muhammad bintang gunawan',
+            'dinta fridayanti',
+            'tiara safitri',
+            'shofwatun najwa',
+            'syaiful ilham',
+            'ahmad sugiarto'
+        ],
+        datasets: [{
+            label: 'Rating',
+            data: [4.5, 5, 3.8, 4.2, 4.9, 2.5],
+            backgroundColor: gradient,
+            borderRadius: 8,
+            barThickness: 40
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                display: false
+            },
+            tooltip: {
+                callbacks: {
+                    label: function(context) {
+                        return `Rating: ${context.raw} ⭐`;
+                    }
+                }
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                max: 5,
+                ticks: {
+                    stepSize: 1
+                },
+                grid: {
+                    color: '#eee'
+                }
+            },
+            x: {
+                grid: {
+                    display: false
+                }
+            }
+        }
+    }
+});
+</script>
+
+</body>
+</html>

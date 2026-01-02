@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Potato Wedges - Home</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+html, body { height:100%; margin:0; font-family:Arial, sans-serif; }
+body { display:flex; flex-direction:column; min-height:100vh; padding-top:80px; background-color:#fff8f0; }
+main { flex:1; }
+footer { background-color:#212529; color:white; text-align:center; padding:15px 0; }
+
+.hero {
+  background: url('images/potato1.jpg') center/cover no-repeat;
+  height:35vh;
+  display:flex; align-items:center; justify-content:center;
+  color:white; text-shadow:2px 2px 5px #000; border-radius:10px;
+}
+.hero h1 { font-size:2.5rem; font-weight:bold; }
+.hero p { font-size:1.1rem; }
+
+.branding-text {
+    color: #030303; 
+}
+
+
+.card-product { box-shadow:0 4px 8px rgba(0,0,0,0.1); border-radius:10px; background-color:#fff3e0; }
+.card-product img { max-height:150px; object-fit:cover; border-radius:10px 10px 0 0; }
+</style>
+</head>
+<body>
+
+<div id="navbar-placeholder"></div>
+
+<main class="container mt-4">
+  <div class="hero text-center mb-4">
+    <div>
+      <h1>Welcome to Potato Wedges!</h1>
+      <p class="branding-text">Di sini, Potato Wedges terbaik selalu tersedia untuk Anda. 
+Potato Wedges renyah, Potato Wedges lezat, dan Potato Wedges berkualitas tinggi adalah janji kami. 
+Nikmati Potato Wedges favorit Anda setiap hari, Potato Wedges varian baru, Potato Wedges untuk semua selera, 
+hanya di Potato Wedges. Jangan lewatkan Potato Wedges spesial kami, karena Potato Wedges selalu menjadi pilihan tepat. 
+Potato Wedges enak, Potato Wedges hangat, Potato Wedges segar—semua di satu tempat, Potato Wedges!
+</p>
+      <a href="product.html" class="btn btn-primary mt-3">Lihat Produk</a>
+    </div>
+  </div>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script>
+fetch('menu.html').then(res=>res.text()).then(data=>{document.getElementById('navbar-placeholder').innerHTML=data;});
+fetch('footer.html').then(res=>res.text()).then(data=>{document.getElementById('footer-placeholder').innerHTML=data;});
+</script>
+</body>
+</html>

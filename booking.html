@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Potato Wedges - Booking</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    html, body { height:100%; margin:0; }
+    body { display:flex; flex-direction:column; min-height:100vh; padding-top:80px; background-color:#fff8f0; }
+    main { flex:1; }
+    footer { background-color:#212529; color:white; text-align:center; padding:15px 0; }
+  </style>
+</head>
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <main class="container mt-4">
+    <div class="row">
+      <div class="col-12 col-md-6 offset-md-3">
+        <h2 class="mb-4 text-center">Booking Potato</h2>
+        <form id="bookingForm">
+          <div class="mb-3">
+            <label for="name" class="form-label">Nama</label>
+            <input type="text" class="form-control" id="name" placeholder="Nama Anda" required>
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label">No HP</label>
+            <input type="text" class="form-control" id="phone" placeholder="08xxxxxxx" required>
+          </div>
+          <div class="mb-3">
+            <label for="product" class="form-label">Produk</label>
+            <select class="form-select" id="product">
+              <option>Potato A</option>
+              <option>Potato B</option>
+              <option>Potato C</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="quantity" class="form-label">Jumlah</label>
+            <input type="number" class="form-control" id="quantity" value="1" min="1">
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Submit Booking</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Load navbar & footer
+    fetch('menu.html').then(res => res.text()).then(data => { document.getElementById('navbar-placeholder').innerHTML = data; });
+    fetch('footer.html').then(res => res.text()).then(data => { document.getElementById('footer-placeholder').innerHTML = data; });
+
+    // Form booking
+    document.getElementById('bookingForm').addEventListener('submit', function(e){
+      e.preventDefault(); // cegah reload
+
+      // Simpan data ke backend nanti kalau ada
+      // Untuk sekarang redirect ke halaman sukses
+      window.location.href = "sukses.html";
+    });
+  </script>
+</body>
+</html>

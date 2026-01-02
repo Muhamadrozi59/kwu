@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Potato Wedges - Products</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+html, body { height:100%; margin:0; font-family:Arial, sans-serif; }
+body { display:flex; flex-direction:column; min-height:100vh; padding-top:80px; background-color:#fff8f0; }
+main { flex:1; }
+footer { background-color:#212529; color:white; text-align:center; padding:15px 0; }
+
+.hero-products {
+  background: url('images/potato2.jpg') center/cover no-repeat;
+  height:35vh; display:flex; align-items:center; justify-content:center; color:white; text-shadow:2px 2px 5px #000; border-radius:10px;
+}
+.hero-products h2 { font-size:2.5rem; font-weight:bold; }
+
+.card-product { box-shadow:0 4px 8px rgba(0,0,0,0.1); border-radius:10px; background-color:#fff3e0; }
+.card-product img { max-height:150px; object-fit:cover; border-radius:10px 10px 0 0; }
+</style>
+</head>
+<body>
+
+<div id="navbar-placeholder"></div>
+
+<main class="container mt-4">
+  <div class="hero-products text-center mb-4">
+    <h2>Our Potatoes</h2>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-md-4 mb-3">
+      <div class="card card-product text-center">
+        <img src="image/p1.jpeg" class="card-img-top" alt="Potato A">
+        <div class="card-body">
+          <h5 class="card-title">Potato A</h5>
+          <p class="card-text">Rp 15.000</p>
+          <a href="booking.html" class="btn btn-primary">Buy Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 mb-3">
+      <div class="card card-product text-center">
+        <img src="image/p1.jpeg" class="card-img-top" alt="Potato B">
+        <div class="card-body">
+          <h5 class="card-title">Potato B</h5>
+          <p class="card-text">Rp 12.000</p>
+          <a href="booking.html" class="btn btn-primary">Buy Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 mb-3">
+      <div class="card card-product text-center">
+        <img src="image/p1.jpeg" class="card-img-top" alt="Potato C">
+        <div class="card-body">
+          <h5 class="card-title">Potato C</h5>
+          <p class="card-text">Rp 20.000</p>
+          <a href="booking.html" class="btn btn-primary">Buy Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script>
+fetch('menu.html').then(res=>res.text()).then(data=>{document.getElementById('navbar-placeholder').innerHTML=data;});
+fetch('footer.html').then(res=>res.text()).then(data=>{document.getElementById('footer-placeholder').innerHTML=data;});
+</script>
+</body>
+</html>

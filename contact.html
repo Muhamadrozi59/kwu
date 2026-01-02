@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Potato Wedges - Contact</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+html, body { height:100%; margin:0; font-family:Arial, sans-serif; }
+body { display:flex; flex-direction:column; min-height:100vh; padding-top:80px; background-color:#fff8f0; }
+main { flex:1; }
+footer { background-color:#212529; color:white; text-align:center; padding:15px 0; }
+
+.hero-contact {
+  background: url('images/contact-brown.jpg') center/cover no-repeat;
+  height:35vh; display:flex; align-items:center; justify-content:center; color:white; text-shadow:2px 2px 5px #000; border-radius:10px;
+}
+.hero-contact h2 { font-size:2.5rem; font-weight:bold; }
+
+.contact-info { margin-top:30px; }
+.card-contact { box-shadow:0 4px 8px rgba(0,0,0,0.1); border-radius:10px; background-color:#fff3e0; }
+</style>
+</head>
+<body>
+
+<div id="navbar-placeholder"></div>
+
+<main class="container mt-4">
+  <div class="hero-contact text-center mb-4">
+    <h2>Contact Us</h2>
+  </div>
+
+  <div class="row contact-info">
+    <div class="col-md-6 mb-3">
+      <div class="card card-contact p-3 h-100 text-center">
+        <i class="fas fa-envelope fa-2x mb-2"></i>
+        <h6>Email</h6>
+        <p>info@potatowedges.com</p>
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <div class="card card-contact p-3 h-100 text-center">
+        <i class="fas fa-phone fa-2x mb-2"></i>
+        <h6>Phone</h6>
+        <p>0812-3456-7890</p>
+      </div>
+    </div>
+    <div class="col-md-12 mb-3">
+      <div class="card card-contact p-3 h-100 text-center">
+        <i class="fas fa-map-marker-alt fa-2x mb-2"></i>
+        <h6>Address</h6>
+        <p>Jl. Potato No.1, Kota Enak, Indonesia</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script>
+fetch('menu.html').then(res=>res.text()).then(data=>{document.getElementById('navbar-placeholder').innerHTML=data;});
+fetch('footer.html').then(res=>res.text()).then(data=>{document.getElementById('footer-placeholder').innerHTML=data;});
+</script>
+</body>
+</html>

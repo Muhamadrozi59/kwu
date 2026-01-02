@@ -1,0 +1,189 @@
+    <!DOCTYPE html>
+    <html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <title>Laporan Keuangan Potato Wedges</title>
+        <style>
+            body {
+                font-family: 'Segoe UI', sans-serif;
+                background: linear-gradient(120deg, #f6f9fc, #e9eef3);
+                margin: 0;
+                padding: 20px;
+            }
+
+            .container {
+                max-width: 900px;
+                margin: auto;
+                background: #ffffff;
+                padding: 30px;
+                border-radius: 12px;
+                box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            }
+
+            h1 {
+                text-align: center;
+                color: #2c3e50;
+                margin-bottom: 5px;
+            }
+
+            h2 {
+                text-align: center;
+                color: #f39c12;
+                margin-top: 0;
+            }
+
+            .date {
+                text-align: center;
+                color: #7f8c8d;
+                margin-bottom: 30px;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 25px;
+            }
+
+            table th {
+                background: #f39c12;
+                color: white;
+                padding: 12px;
+                text-align: left;
+            }
+
+            table td {
+                padding: 12px;
+                border-bottom: 1px solid #ecf0f1;
+            }
+
+            table tr:hover {
+                background-color: #fdf2e9;
+            }
+
+            .section-title {
+                margin: 25px 0 10px;
+                color: #2c3e50;
+            }
+
+            .summary {
+                display: flex;
+                justify-content: space-between;
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+
+            .card {
+                flex: 1;
+                min-width: 250px;
+                background: #f8f9fa;
+                border-left: 6px solid #f39c12;
+                padding: 15px;
+                border-radius: 8px;
+            }
+
+            .card h3 {
+                margin: 0;
+                color: #7f8c8d;
+                font-size: 16px;
+            }
+
+            .card p {
+                font-size: 22px;
+                font-weight: bold;
+                margin: 5px 0 0;
+                color: #2c3e50;
+            }
+
+            .profit {
+                border-left-color: #27ae60;
+            }
+
+            .expense {
+                border-left-color: #c0392b;
+            }
+
+            footer {
+                text-align: center;
+                margin-top: 30px;
+                font-size: 14px;
+                color: #95a5a6;
+            }
+        </style>
+    </head>
+    <body>
+
+    <div class="container">
+        <h1>Laporan Keuangan</h1>
+        <h2>Usaha Potato Wedges</h2>
+        <div class="date">Periode: november - Desember 2025</div>
+
+        <h3 class="section-title">📈 Pemasukan</h3>
+        <table>
+            <tr>
+                <th>Tanggal</th>
+                <th>Keterangan</th>
+                <th>Jumlah (Rp)</th>
+            </tr>
+            <tr>
+                <td>05-01-2025</td>
+                <td>Penjualan Potato Wedges</td>
+                <td>5.000</td>
+            </tr>
+            <tr>
+                <td>10-01-2025</td>
+                <td>Penjualan Potato Wedges</td>
+                <td>10.000</td>
+            </tr>
+            <tr>
+                <td>18-01-2025</td>
+                <td>Penjualan Potato Wedges</td>
+                <td>15.000</td>
+            </tr>
+        </table>
+
+        <h3 class="section-title">📉 Pengeluaran</h3>
+        <table>
+            <tr>
+                <th>Tanggal</th>
+                <th>Keterangan</th>
+                <th>Jumlah (Rp)</th>
+            </tr>
+            <tr>
+                <td>02-01-2025</td>
+                <td>Pembelian Kentang</td>
+                <td>200.000</td>
+            </tr>
+            <tr>
+                <td>07-01-2025</td>
+                <td>Minyak Goreng & Bumbu</td>
+                <td>150.000</td>
+            </tr>
+            <tr>
+                <td>15-01-2025</td>
+                <td>Kemasan & Gas</td>
+                <td>200.000</td>
+            </tr>
+        </table>
+
+        <div class="summary">
+            <div class="card">
+                <h3>Total Pemasukan</h3>
+                <p>Rp 1.200.000</p>
+            </div>
+            <div class="card expense">
+                <h3>Total Pengeluaran</h3>
+                <p>Rp 550.000</p>
+            </div>
+            <div class="card profit">
+                <h3>Laba Bersih</h3>
+                <p>Rp 150.000</p>
+            </div>
+        </div>
+
+        <footer>
+            © 2025 Laporan Keuangan Usaha Potato Wedges
+        </footer>
+    </div>
+
+    </body>
+    </html>
